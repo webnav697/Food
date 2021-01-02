@@ -2,6 +2,7 @@
 
 
 window.addEventListener('DOMContentLoaded',()=>{
+	// Работаем с табами
 // Объявляем переменные
 const tabs = document.querySelectorAll('.tabheader__item');
 const tabsContent = document.querySelectorAll('.tabcontent');
@@ -74,5 +75,18 @@ tabsParrent.addEventListener('click', (event) => {
 	});*/
 });
 
+// Работа с тайм аутоми
+/*const dateMainData = new Date(2020, 5, 1, 20);
+const timess = setInterval((text, dateMain) => {
+	console.log(text,dateMain);
+	clearInterval(timess);
+}, 2000, "Привет мир", dateMainData);
+//timess("");
 
+const timess2 = setTimeout(nameFunc, 2000);
+
+function nameFunc() {
+	console.log('Текст');
+}
+*/
 
