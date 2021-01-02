@@ -19,6 +19,14 @@ window.addEventListener('DOMContentLoaded',()=>{
 		};
 	} 
 
+	function getZero(num) {// Функция добавит ноль типа 01, 02,03
+		if (num >= 0 && num < 10) {// Если часы или минуты будут меньше 10 типа 9
+			return `0${num}`;
+		}else{
+			return num;
+		}
+	}
+
 	function setClock(selector, endtime) {
 		const timer = document.querySelector(selector); // Достаём селектор основного блока
 		const days = timer.querySelector('#days');// Достаём селекторы куда положим потом данные
@@ -31,10 +39,10 @@ window.addEventListener('DOMContentLoaded',()=>{
 
 		function updateClock() {// Функция обновления данных полученных
 			const t = getTimeRemaining(endtime);
-			days.innerHTML = t.days; //Отправляем данные в вёрстку
-			hours.innerHTML = t.hours; //Отправляем данные в вёрстку
-			minutes.innerHTML = t.minutes; //Отправляем данные в вёрстку
-			seconds.innerHTML = t.seconds; //Отправляем данные в вёрстку
+			days.innerHTML = getZero(t.days); //Отправляем данные в вёрстку
+			hours.innerHTML = getZero(t.hours); //Отправляем данные в вёрстку
+			minutes.innerHTML = getZero(t.minutes); //Отправляем данные в вёрстку
+			seconds.innerHTML = getZero(t.seconds); //Отправляем данные в вёрстку
 
 			if(t.total <= 0){// Если время кончилось, отсанавливаем функцию
 				clearInterval(timeInterval);
