@@ -1,6 +1,5 @@
 "use strict";
 
-
 window.addEventListener('DOMContentLoaded',()=>{
 	// Работаем с табами
 // Объявляем переменные
