@@ -1,9 +1,9 @@
 "use strict";
 // модальное окно
 window.addEventListener('DOMContentLoaded',()=>{
-	const modalTrigger = document.querySelectorAll('[data-modal]');// Достаём все кнопки по атрибуту date-modal
-	const modal = document.querySelector('.modal');//Достаём весь блок с формой
-	const modalCloseBtn = document.querySelector('[data-close]');// Достаём кнопку закрытия
+	const modalTrigger = document.querySelectorAll('[data-modal]'); // Достаём все кнопки по атрибуту date-modal
+	const modal = document.querySelector('.modal'); //Достаём весь блок с формой
+	const modalCloseBtn = document.querySelector('[data-close]'); // Достаём кнопку закрытия
 
 	// Функция открытия модального окна
 	function openModal() {
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded',()=>{
 	} 
 	/*const modalTimerId = setTimeout(openModal,5000);*/
 	// Откроем окно после назначенного времени,
-	//если нужен такой функционал расскомментировать const modalTimerId 
+	// Eсли нужен такой функционал расскомментировать const modalTimerId 
 	// и также в функции openModal расскоментировать clearInterval(modalTimerId)
 
 	
@@ -32,7 +32,7 @@ function showModalByScroll() {
 window.addEventListener ('scroll', showModalByScroll);
 */
 
-	modalTrigger.forEach(btn =>{ // Циклом достаём все кнопки
+	modalTrigger.forEach(btn => { // Циклом достаём все кнопки
 		btn.addEventListener('click', openModal);// Вешаем функцию на клик
 	});
 
