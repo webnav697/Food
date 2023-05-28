@@ -1,7 +1,7 @@
 "use strict";
 // Таймер обратного отсчёта
 window.addEventListener('DOMContentLoaded',()=>{
-	const deadline = '2022-05-31';// Дата конца акции
+	const deadline = '2023-06-31';// Дата конца акции
 //const deadline2 = '2021-01-04';// Дата конца 2 акции
 
 	function getTimeRemaining(endtime) {
